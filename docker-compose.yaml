@@ -3,8 +3,8 @@ services:
   backend:
     build: ./backend
     # only image is added after compose confirm working 
-    # image: chandrabhan4122003/pms-backend:latest   
-    image: chandrabhan4122003/pms-backend:latest
+    
+    image: prakritiagrawal/pms-backend1:latest
 
     ports:
       - "5000:5000"
@@ -18,7 +18,7 @@ services:
 
   frontend:
     build: ./frontend
-    image: chandrabhan4122003/pms-frontend:latest
+    image: prakritiagrawal/pms-frontend1:latest
     ports:
       - "3000:3000"
     networks:
