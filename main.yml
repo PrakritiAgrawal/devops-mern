@@ -24,8 +24,8 @@ jobs:
 
       - name: Build and push backendNode image
         run: |
-          docker build -t shivam05gupta/backend-node ./backend
-          docker push shivam05gupta/backend-node
+          docker build -t  prakritiagrava/backend-node ./backend
+          docker push  prakritiagrava/backend-node
 
       - name: Build and push frontend image
         run: |
