@@ -31,17 +31,17 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                bat 'docker build -t chandrabhan4122003/pms-backend:latest ./backend'
-                bat 'docker build -t chandrabhan4122003/pms-frontend:latest ./frontend'
+                bat 'docker build -t prakritiagrawal/pms-backend:latest ./backend'
+                bat 'docker build -t prakritiagrawal/pms-frontend:latest ./frontend'
             }
         }
 
         stage('Docker Push') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-                    bat 'docker login -u %DOCKER_USER% -p %DOCKER_PASS%'
-                    bat 'docker push chandrabhan4122003/pms-backend:latest'
-                    bat 'docker push chandrabhan4122003/pms-frontend:latest'
+                withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'prakritiagrawal', passwordVariable: 'Rit3895h@')]) {
+                    bat 'docker login -u %prakritiagrawal% -p %Rit3895h@%'
+                    bat 'docker push prakritiagrawal/pms-backend:latest'
+                    bat 'docker push prakritiagrawal/pms-frontend:latest'
                 }
             }
         }
